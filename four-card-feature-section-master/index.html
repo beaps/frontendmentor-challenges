@@ -107,10 +107,40 @@
       text-align: right;
     }
 
-
-
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media (max-width: 767px) {
+      .grid-container {
+        gap: 0;
+        grid-template-columns: 1fr;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .card {
+        margin-bottom: 2em;
+      }
+
+      .card--bt-green {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+      }
+
+      .card--bt-red {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+      }
+
+      .card--bt-yellow {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+      }
+
+      .card--bt-blue {
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+      }
+    }
   </style>
 </head>
 <body>
