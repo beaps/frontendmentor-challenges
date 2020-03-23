@@ -13,12 +13,15 @@
     :root {
       --font-color: #444;
       --font-color-light: #aaa;
+      --bg-body: #fafafa;
+      --bg-card: #fff;
     }
-    
+
     body {
+      color: var(--font-color);
+      background-color: var(--bg-body);
       font-family: 'Poppins', sans-serif;
       font-size: 15px;
-      color: var(--font-color);
     }
 
     .header {
@@ -45,6 +48,43 @@
       font-weight: 400;
     }
 
+    .card {
+      background-color: var(--bg-card);
+      border-radius: 5px;
+      border-top-width: 3px;
+      border-top-style: solid;
+      max-width: 300px;
+      padding: 2em;
+    }
+
+    .card--bt-green {
+      border-top-color: hsl(180, 62%, 55%);
+    }
+
+    .card--bt-red {
+      border-top-color: hsl(0, 78%, 62%);
+    }
+
+    .card--bt-yellow {
+      border-top-color: hsl(34, 97%, 64%);
+    }
+
+    .card--bt-blue {
+      border-top-color: hsl(212, 86%, 64%);
+    }
+
+    .card__title {
+      margin-top: 0;
+    }
+
+    .card__text {
+      color: var(--font-color-light);
+    }
+
+    .card__icon {
+      text-align: right;
+    }
+
 
 
     .attribution { font-size: 11px; text-align: center; }
@@ -65,28 +105,28 @@
   </header>
 
   <main class="grid_container">
-    <div class="card">
+    <div class="card card--bt-green">
       <h3 class="card__title">Supervisor</h3>
       <p class="card__text">Monitors activity to identify project roadblocks</p>
       <div class="card__icon">
         <img src="./images/icon-supervisor.svg" alt="">
       </div>
     </div>
-    <div class="card">
+    <div class="card card--bt-red">
       <h3 class="card__title">Team Builder</h3>
       <p class="card__text">Scans our talent network to create the optimal team for your project</p>
       <div class="card__icon">
         <img src="./images/icon-team-builder.svg" alt="">
       </div>
     </div>
-    <div class="card">
+    <div class="card card--bt-yellow">
       <h3 class="card__title">Karma</h3>
       <p class="card__text">Regularly evaluates our talent to ensure quality</p>
       <div class="card__icon">
         <img src="./images/icon-karma.svg" alt="">
       </div>
     </div>
-    <div class="card">
+    <div class="card card--bt-blue">
       <h3 class="card__title">Calculator</h3>
       <p class="card__text">Uses data from past projects to provide better delivery estimates</p>
       <div class="card__icon">
