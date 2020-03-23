@@ -8,8 +8,45 @@
   
   <title>Frontend Mentor | Four card feature section</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --font-color: #444;
+      --font-color-light: #aaa;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      color: var(--font-color);
+    }
+
+    .header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .header__title span {
+      display: block;
+    }
+
+    .header__title--light {
+      font-weight: 200;
+    }
+
+    .header__title--bold {
+      font-weight: 600;
+    }
+
+    .header__subtitle {
+      color: var(--font-color-light);
+      font-size: 19px;
+      font-weight: 400;
+    }
+
+
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
