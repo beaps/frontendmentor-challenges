@@ -23,10 +23,19 @@
     .image-container {
       background: url('./images/hero-desktop.jpg');
       background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
     }
 
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media (max-width: 767px) {
+      .image-container {
+        background: url('./images/hero-mobile.jpg');
+        background-repeat: no-repeat;
+      }
+    }
   </style>
 </head>
 <body>
