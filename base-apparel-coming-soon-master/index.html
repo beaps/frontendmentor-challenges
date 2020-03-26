@@ -5,18 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    body {
+      font-family: 'Josefin Sans', sans-serif;
+      margin: 0;
+    }
+
+    .main {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      height: 100vh;
+    }
+
+    .image-container {
+      background: url('./images/hero-desktop.jpg');
+      background-repeat: no-repeat;
+    }
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
 
-  <main>
+  <main class="main">
     <div class="content">
       <div class="content__logo">
         <img src="./images/logo.svg" alt="">
