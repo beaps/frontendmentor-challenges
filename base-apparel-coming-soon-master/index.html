@@ -10,9 +10,10 @@
 
   <style>
     :root {
+      --dark-grayish-red: hsl(0, 6%, 24%);
       --desaturated-red:  hsl(0, 36%, 70%);
       --soft-pink: hsl(0, 80%, 86%);
-      --dark-grayish-red: hsl(0, 6%, 24%);
+      --soft-red: hsl(0, 93%, 68%)
     }
 
     * {
@@ -95,6 +96,10 @@
       font-size: 1.3em;
     }
 
+    .email-container input:hover {
+      border-color: var(--soft-red);
+    }
+
     .email-container button {
       position: absolute;
       right: 0;
@@ -104,6 +109,10 @@
       border: 0;
       border-radius: 34px;
       background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    }
+
+    .email-container button:hover {
+      background: linear-gradient(135deg, hsl(0, 80%, 86%), var(--soft-red));
     }
 
     .image-container {
@@ -117,9 +126,29 @@
     .attribution a { color: hsl(228, 45%, 44%); }
 
     @media (max-width: 767px) {
+      .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 250px 1fr;
+        height: auto;
+      }
+
+      .content {
+        padding: 10% 8%;
+      }
+
+      .content__title {
+        font-size: 2.5em;
+        padding-top: 0.3em;
+        text-align: center;
+        letter-spacing: 12px;
+        line-height: 45px;
+      }
+
       .image-container {
         background: url('./images/hero-mobile.jpg');
         background-repeat: no-repeat;
+        grid-row: 1 / 2;
+        background-size: cover;
       }
     }
   </style>
@@ -140,12 +169,12 @@
         Hello fellow shoppers! We're currently building our new fashion store.
         Add your email below to stay up-to-date with announcements and our launch deals.
       </p>
-      <div class="email-container">
-        <input type="email" placeholder="Email Address">
+      <form class="email-container">
+        <input type="email" placeholder="Email Address" required>
         <button>
           <img src="./images/icon-arrow.svg" alt="send">
         </button>
-      </div>
+      </form>
     </div>
     <div class="image-container"></div>
   </main>
