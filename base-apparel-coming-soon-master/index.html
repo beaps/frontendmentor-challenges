@@ -15,6 +15,10 @@
       --dark-grayish-red: hsl(0, 6%, 24%);
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Josefin Sans', sans-serif;
       margin: 0;
@@ -27,9 +31,11 @@
     }
 
     .content {
-      padding: 3.5em 9rem;
+      padding: 8% 25% 8% 20%;
+      /* padding: 3.5em 9rem; */
       background: url('./images/bg-pattern-desktop.svg'),
                   linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+      background-size: cover;
     }
 
     .content__logo img {
@@ -91,8 +97,8 @@
 
     .email-container button {
       position: absolute;
-      right: -25px;
-      top: 0px;
+      right: 0;
+      top: 0;
       width: 90px;
       height: 100%;
       border: 0;
