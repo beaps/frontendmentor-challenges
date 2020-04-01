@@ -16,14 +16,16 @@
       --accent-blue: hsl(248, 32%, 49%);
       --neutral-dark-blue: hsl(249, 10%, 26%);
       --neutral-grayish-blue: hsl(246, 25%, 77%);
+
+      --border-radius: 8px;
     }
 
     * {
       box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
       background: var(--primary-red) url('./images/bg-intro-desktop.png');
       background-size: container;
     }
@@ -56,7 +58,7 @@
 
     .price {
       background: var(--accent-blue);
-      border-radius: 8px;
+      border-radius: var(--border-radius);
       color: white;
       text-align: center;
       padding: 1em;
@@ -73,6 +75,45 @@
 
     .price--blue {
       color: var(--neutral-grayish-blue);
+    }
+
+    .form-container {
+      background: white;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      margin-top: 1em;
+    }
+
+    .form {
+      padding: 2em;
+    }
+
+    .form input {
+      display: block;
+      width: 100%;
+      padding: 1em 2em;
+      border-radius: 5px;
+      border: 1px solid var(--neutral-grayish-blue);
+      margin-bottom: 1.5em;
+      font-weight: 700;
+      font-size: 0.8em;
+      outline: none;
+      color: #444;
+    }
+
+    .form input::placeholder {
+      font-weight: 700;
+      color: gray;
+    }
+
+    .form input:hover,
+    .form input:focus {
+      border-color: var(--accent-blue);
+    }
+
+    .form button {
+      width: 100%;
+      padding: 1em;
     }
 
     .attribution { font-size: 11px; text-align: center; }
