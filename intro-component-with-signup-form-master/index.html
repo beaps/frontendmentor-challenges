@@ -18,6 +18,10 @@
       --neutral-grayish-blue: hsl(246, 25%, 77%);
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
       background: var(--primary-red) url('./images/bg-intro-desktop.png');
@@ -46,6 +50,31 @@
       font-size: 0.8em;
     }
 
+    .main {
+      padding-right: 9em;
+    }
+
+    .price {
+      background: var(--accent-blue);
+      border-radius: 8px;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+    }
+
+    .price--text-bold {
+      font-weight: 600;
+    }
+
+    .price--text-light {
+      font-weight: 400;
+    }
+
+    .price--blue {
+      color: var(--neutral-grayish-blue);
+    }
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
@@ -62,9 +91,10 @@
     </header>
     
     
-    <main>
+    <main class="main">
       <div class="price">
-        Try it free 7 days then $20/mo. thereafter
+        <span class="price--text-bold">Try it free 7 days</span>
+        <span class="price--text-light price--blue">then $20/mo. thereafter</span>
       </div>
       <div class="form-container">
         <form class="form">
