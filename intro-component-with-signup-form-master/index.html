@@ -28,19 +28,21 @@
     body {
       background: var(--primary-red) url('./images/bg-intro-desktop.png');
       background-size: container;
+      margin: 0;
     }
 
     .grid-container {
       height: 100vh;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      place-items: center;
     }
 
     .header {
       color: white;
       padding-left: 9em;
       padding-right: 4em;
+      align-self: center;
+      justify-self: center;
     }
 
     .header__title {
@@ -54,6 +56,7 @@
 
     .main {
       padding-right: 9em;
+      align-self: center;
     }
 
     .price {
@@ -82,9 +85,6 @@
       border-radius: var(--border-radius);
       overflow: hidden;
       margin-top: 1em;
-    }
-
-    .form {
       padding: 2em;
     }
 
@@ -130,6 +130,21 @@
       background-color: hsl(154, 59%, 41%);
     }
 
+    .form-container__info {
+      color: var(--neutral-grayish-blue);
+      text-align: center;
+      font-size: 0.6em;
+      margin-top: 1em;
+    }
+
+    .form-container__info--red {
+      color: var(--primary-red);
+    }
+
+    .form-container__info--bold {
+      font-weight: 600;
+    }
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
@@ -160,7 +175,10 @@
           <button>Claim your free trial</button>
         </form>
         <div class="form-container__info">
-          By clicking the button, you are agreeing to our Terms and Services
+          By clicking the button, you are agreeing to our
+          <span class="form-container__info--red form-container__info--bold">
+            Terms and Services
+          </span>
         </div>
       </div>
     </main>
