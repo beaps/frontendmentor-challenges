@@ -24,38 +24,51 @@
       background-size: container;
     }
 
+    .grid-container {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+    }
+
+    .header {
+      color: white;
+    }
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
 
-  <header class="header">
-    <h1 class="header__title">Learn to code by watching others</h1>
-    <p class="header__info">
-      See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
-      but understanding how developers think is invaluable.
-    </p>
-  </header>
- 
-
-  <main>
-    <div class="price">
-      Try it free 7 days then $20/mo. thereafter
-    </div>
-    <div class="form-container">
-      <form class="form">
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
-        <input type="email" placeholder="Email Address">
-        <input type="password" placeholder="Password">
-        <button>Claim your free trial</button>
-      </form>
-      <div class="form-container__info">
-        By clicking the button, you are agreeing to our Terms and Services
+  <div class="grid-container">
+    <header class="header">
+      <h1 class="header__title">Learn to code by watching others</h1>
+      <p class="header__info">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.
+      </p>
+    </header>
+    
+    
+    <main>
+      <div class="price">
+        Try it free 7 days then $20/mo. thereafter
       </div>
-    </div>
-  </main>
+      <div class="form-container">
+        <form class="form">
+          <input type="text" placeholder="First Name">
+          <input type="text" placeholder="Last Name">
+          <input type="email" placeholder="Email Address">
+          <input type="password" placeholder="Password">
+          <button>Claim your free trial</button>
+        </form>
+        <div class="form-container__info">
+          By clicking the button, you are agreeing to our Terms and Services
+        </div>
+      </div>
+    </main>
+  </div>
   
   <footer>
     <p class="attribution">
