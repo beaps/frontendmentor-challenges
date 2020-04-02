@@ -102,6 +102,21 @@
       color: #444;
     }
 
+    .form div {
+      position: relative;
+    }
+
+    /* .form div::after {
+      content: '';
+      background-image: url('./images/icon-error.svg');
+      width: 1.3em;
+      height: 1.3em;
+      background-size: 1.3em;
+      position: absolute;
+      top: 0.8em;
+      right: 1.5em;
+    } */
+
     .form input::placeholder {
       font-weight: 700;
       color: gray;
@@ -144,6 +159,14 @@
 
     .form-container__info--bold {
       font-weight: 600;
+    }
+
+    .form__error {
+      color: var(--primary-red);
+      text-align: right;
+      font-size: 0.6em;
+      margin-top: -1.5em;
+      margin-bottom: 2em;
     }
 
     .attribution { font-size: 11px; text-align: center; }
@@ -206,11 +229,11 @@
         <span class="price--text-light price--blue">then $20/mo. thereafter</span>
       </div>
       <div class="form-container">
-        <form class="form">
-          <input type="text" placeholder="First Name">
-          <input type="text" placeholder="Last Name">
-          <input type="email" placeholder="Email Address">
-          <input type="password" placeholder="Password">
+        <form id="form" class="form">
+          <div class="div-first-name"><input id="first-name" type="text" placeholder="First Name"></div>
+          <div class="div-last-name"><input id="last-name" type="text" placeholder="Last Name"></div>
+          <div class="div-email"><input id="email" type="email" placeholder="Email Address"></div>
+          <div class="div-password"><input id="password" type="password" placeholder="Password"></div>
           <button>Claim your free trial</button>
         </form>
         <div class="form-container__info">
@@ -229,5 +252,7 @@
       Coded by beaps.
     </p>
   </footer>
+
+  <script src="./index.js"></script>
 </body>
 </html>
