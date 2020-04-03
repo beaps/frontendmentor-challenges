@@ -106,17 +106,6 @@
       position: relative;
     }
 
-    /* .form div::after {
-      content: '';
-      background-image: url('./images/icon-error.svg');
-      width: 1.3em;
-      height: 1.3em;
-      background-size: 1.3em;
-      position: absolute;
-      top: 0.8em;
-      right: 1.5em;
-    } */
-
     .form input::placeholder {
       font-weight: 700;
       color: gray;
@@ -167,6 +156,10 @@
       font-size: 0.6em;
       margin-top: -1.5em;
       margin-bottom: 2em;
+    }
+
+    .form__input--error {
+      border: 2px solid var(--primary-red) !important;
     }
 
     .attribution { font-size: 11px; text-align: center; }
@@ -232,7 +225,8 @@
         <form id="form" class="form">
           <div class="div-first-name"><input id="first-name" type="text" placeholder="First Name"></div>
           <div class="div-last-name"><input id="last-name" type="text" placeholder="Last Name"></div>
-          <div class="div-email"><input id="email" type="email" placeholder="Email Address"></div>
+          <div class="div-email"><input id="email" type="text" placeholder="Email Address"></div>
+          <!-- <div class="div-email"><input id="email" type="email" placeholder="Email Address" autocomplete="off" autocorrect="off"></div> -->
           <div class="div-password"><input id="password" type="password" placeholder="Password"></div>
           <button>Claim your free trial</button>
         </form>

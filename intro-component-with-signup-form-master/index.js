@@ -1,10 +1,9 @@
 const form = document.querySelector('#form');
-const email = document.querySelector('#email');
 const inputs = document.querySelectorAll('#form input');
 const head = document.querySelector('head');
-// let stylesheet = document.styleSheets[0];
 const style = document.createElement('style');
 document.head.appendChild(style);
+// let stylesheet = document.styleSheets[0];
 
 function addIconError(element) {
   style.sheet.insertRule(
@@ -29,6 +28,7 @@ function removeIconError(element) {
     for (let index = 0; index < cssRulesLength; index++) {
       if (style.sheet.cssRules[index].selectorText === `.div-${element.id}::after`) {
         style.sheet.deleteRule(index);
+        break;
       }
     }
   }
@@ -41,15 +41,32 @@ function deleteError(element) {
     error.remove();
     removeIconError(element);
   }
+  element.classList.remove('form__input--error');
+}
+
+function addTypeError(element, message) {
+  addIconError(element);
+  element.insertAdjacentHTML(
+    'afterend',
+    `<p class="form__error">${message}</p>`
+  );
+  element.classList.add('form__input--error');
+}
+
+function validateEmail(element) {
+  if (
+    element.id === 'email' &&
+    !element.value.match(/^\"?[\w\.!#$%&'*+\-/=?^_`{|}~ ]{1,62}\"?@((\[.*\])|[\w\-]+\.?\w{2,10})$/i)
+  ) {
+    addTypeError(element, 'Looks like this is not an email');
+  }
 }
 
 function addError(element) {
   if (!element.value) {
-    addIconError(element);
-    element.insertAdjacentHTML(
-      'afterend',
-      `<p class="form__error">${element.placeholder} cannot be empty</p>`
-    );
+    addTypeError(element, `${element.placeholder} cannot be empty`);
+  } else {
+    validateEmail(element);
   }
 }
 
