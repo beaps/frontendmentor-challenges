@@ -1,6 +1,5 @@
 const form = document.querySelector('#form');
 const inputs = document.querySelectorAll('#form input');
-const head = document.querySelector('head');
 const style = document.createElement('style');
 document.head.appendChild(style);
 // let stylesheet = document.styleSheets[0];
