@@ -31,7 +31,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
     }
 
     .grid-container {
@@ -148,6 +147,32 @@
 
     .attribution { font-size: 11px; text-align: center; margin: 1em;}
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media (min-width: 610px) {
+      .flex-container {
+        height: 100vh;
+      }
+
+      .grid-container {
+        border-radius: 8px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .header {
+        grid-column: 1 / -1;
+      }
+      .subscription {
+        grid-column: 1 / 2;
+      }
+      .why-us {
+        grid-column: 2 / 3;
+      }
+      .header,
+      .subscription,
+      .why-us {
+        padding: 2em;
+      }
+    }
   </style>
 </head>
 <body>
