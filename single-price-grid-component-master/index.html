@@ -28,15 +28,18 @@
 
     .flex-container {
       background: var(--lightGray);
-      /* display: flex;
+      display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh; */
+      height: 100vh;
     }
 
     .grid-container {
+      border-radius: 5px;
+      overflow: hidden;
       max-width: 600px;
-      padding: 5%;
+      margin: 5%;
+      /* padding: 5%; */
     }
 
     .header,
@@ -117,6 +120,19 @@
     .subscription__button:hover,
     .subscription__button:focus {
       background: hsl(71, 73%, 64%);
+    }
+
+    .why-us {
+      background: hsl(179, 62%, 47%);
+      color: white;
+    }
+
+    .why-us__title {
+      font-size: 1.05em;
+    }
+
+    .why-us__info {
+      color: var(--lightGray);
     }
 
     .mb-medium {
