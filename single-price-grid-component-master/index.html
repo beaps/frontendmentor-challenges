@@ -26,10 +26,29 @@
       padding: 0;
     }
 
+    .flex-container {
+      background: var(--lightGray);
+      /* display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; */
+    }
+
+    .grid-container {
+      /* background: var(--lightGray); */
+      padding: 5%;
+      /* padding: 1.5em; */
+      max-width: 600px;
+    }
+
     .header,
     .subscription,
     .why-us {
       padding: 1.5em 1em;
+    }
+
+    .header {
+      background: white;
     }
 
     .header__title {
@@ -49,42 +68,51 @@
       line-height: 1.6em;
     }
 
+    .subscription {
+      background: var(--cyan);
+      color: white;
+    }
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-  <header class="header">
-    <h1 class="header__title">Join our community</h1>
-    <h2 class="header__subtitle">30-day, hassle-free money back guarantee</h2>
-    <p class="header__info">
-      Gain access to our full library of tutorials along with expert code reviews.
-      Perfect for any developers who are serious about honing their skills.
-    </p>
-  </header>
-
-  <section class="subscription">
-    <h2 class="subscrition__title">Monthly Subscription</h2>
-    <p class="subscription__price">
-      <span class="subscription__price--size subscription__price--bold">&dollar;29</span>
-      <span class="subscription__price--light">per month</span>
-    </p>
-    <p class="subscription__info">Full access for less than &dollar;1 a day</p>
-    <button class="subscription__button">Sign Up</button>
-  </section>
-  
-  <section class="why-us">
-    <h2 class="why-us__title">Why Us</h2>
-    <p class="why-us__info">
-      Tutorials by industry experts
-      Peer &amp; expert code review
-      Coding exercises
-      Access to our GitHub repos
-      Community forum
-      Flashcard decks
-      New videos every week
-    </p>
-  </section>
+  <div class="flex-container">
+    <div class="grid-container">
+      <header class="header">
+        <h1 class="header__title">Join our community</h1>
+        <h2 class="header__subtitle">30-day, hassle-free money back guarantee</h2>
+        <p class="header__info">
+          Gain access to our full library of tutorials along with expert code reviews.
+          Perfect for any developers who are serious about honing their skills.
+        </p>
+      </header>
+    
+      <section class="subscription">
+        <h2 class="subscrition__title">Monthly Subscription</h2>
+        <p class="subscription__price">
+          <span class="subscription__price--size subscription__price--bold">&dollar;29</span>
+          <span class="subscription__price--light">per month</span>
+        </p>
+        <p class="subscription__info">Full access for less than &dollar;1 a day</p>
+        <button class="subscription__button">Sign Up</button>
+      </section>
+    
+      <section class="why-us">
+        <h2 class="why-us__title">Why Us</h2>
+        <p class="why-us__info">
+          Tutorials by industry experts
+          Peer &amp; expert code review
+          Coding exercises
+          Access to our GitHub repos
+          Community forum
+          Flashcard decks
+          New videos every week
+        </p>
+      </section>
+    </div>
+  </div>
 
   <footer>
     <p class="attribution">
