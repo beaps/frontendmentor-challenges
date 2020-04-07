@@ -16,7 +16,7 @@
       --brightYellow: hsl(71, 73%, 54%);
       /* Neutral */
       --lightGray: hsl(204, 43%, 93%);
-      --grayishBlue: hsl(218, 22%, 67%)
+      --grayishBlue: hsl(218, 22%, 67%);
     }
 
     * {
@@ -35,10 +35,8 @@
     }
 
     .grid-container {
-      /* background: var(--lightGray); */
-      padding: 5%;
-      /* padding: 1.5em; */
       max-width: 600px;
+      padding: 5%;
     }
 
     .header,
@@ -59,7 +57,7 @@
 
     .header__subtitle {
       color: var(--brightYellow);
-      font-size: 1.2em;
+      font-size: 1.05em;
       margin-bottom: 1em;
     }
 
@@ -71,6 +69,62 @@
     .subscription {
       background: var(--cyan);
       color: white;
+    }
+
+    .subscription__title {
+      font-size: 1.05em;
+    }
+
+    .subscription__price {
+      display: flex;
+      align-items: center;
+    }
+
+    .subscription__price--bold {
+      font-weight: 700;
+    }
+
+    .subscription__price--size {
+      font-size: 1.5em;
+    }
+
+    .subscription__price--color {
+      color: hsl(179, 62%, 75%);
+    }
+
+    .subscription__price--ml {
+      margin-left: 0.7em;
+    }
+
+    .subscription__info {
+      color: var(--lightGray);
+      margin-top: 0.5em;
+    }
+
+    .subscription__button {
+      border: 0;
+      background: var(--brightYellow);
+      color: white;
+      width: 100%;
+      height: 3em;
+      border-radius: 5px;
+      font-size: 1em;
+      font-weight: bold;
+      box-shadow: 0px 8px 5px 1px hsla(179, 62%, 20%, 0.15);
+      outline: none;
+    }
+
+    .subscription__button:hover,
+    .subscription__button:focus {
+      background: hsl(71, 73%, 64%);
+    }
+
+    .mb-medium {
+      margin-bottom: 1em;
+    }
+
+    .mb-large {
+      margin-bottom: 1.5em;
     }
 
     .attribution { font-size: 11px; text-align: center; }
@@ -90,17 +144,17 @@
       </header>
     
       <section class="subscription">
-        <h2 class="subscrition__title">Monthly Subscription</h2>
+        <h2 class="subscription__title mb-medium">Monthly Subscription</h2>
         <p class="subscription__price">
           <span class="subscription__price--size subscription__price--bold">&dollar;29</span>
-          <span class="subscription__price--light">per month</span>
+          <span class="subscription__price--color subscription__price--ml">per month</span>
         </p>
-        <p class="subscription__info">Full access for less than &dollar;1 a day</p>
+        <p class="subscription__info mb-large">Full access for less than &dollar;1 a day</p>
         <button class="subscription__button">Sign Up</button>
       </section>
     
       <section class="why-us">
-        <h2 class="why-us__title">Why Us</h2>
+        <h2 class="why-us__title mb-medium">Why Us</h2>
         <p class="why-us__info">
           Tutorials by industry experts
           Peer &amp; expert code review
