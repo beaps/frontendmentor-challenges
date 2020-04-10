@@ -28,17 +28,53 @@
       font-family: 'Libre Franklin', sans-serif;
     }
 
+    .mt-large {
+      margin-top: 1.5rem;
+    }
+
+    .mt-medium {
+      margin-top: 1.5rem;
+    }
+
+    body {
+      text-align: center;
+      color: var(--veryDarkBlue);
+    }
+
+    .header {
+      padding: 4rem 1rem 1.5rem;
+    }
+
+    .header__logo {
+      width: 50px;
+    }
+
+    .header__title {
+      font-weight: 300;
+      font-size: 1.3rem;
+      color: var(--gray);
+    }
+
+    .header__title--bold {
+      font-weight: 700;
+      color: var(--veryDarkBlue);
+    }
+
+    .header__info {
+      font-size: 0.75em;
+    }
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
   <header class="header">
-    <img src="./images/logo.svg" alt="Ping logo">
-    <h1 class="header__title">
+    <img class="header__logo" src="./images/logo.svg" alt="Ping logo">
+    <h1 class="header__title mt-large">
       We are launching <span class="header__title--bold">soon!</span>
     </h1>
-    <p class="header__info">Subscribe and get notified</p>
+    <p class="header__info mt-medium">Subscribe and get notified</p>
   </header>
   
   <form class="form">
