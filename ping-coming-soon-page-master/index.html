@@ -29,11 +29,15 @@
     }
 
     .mt-large {
-      margin-top: 1.5rem;
+      margin-top: 2rem;
     }
 
     .mt-medium {
       margin-top: 1.5rem;
+    }
+
+    .mt-small {
+      margin-top: 0.7rem;
     }
 
     body {
@@ -64,6 +68,44 @@
       font-size: 0.75em;
     }
 
+    .form {
+      padding: 0 2rem;
+    }
+
+    .form__email {
+      width: 100%;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      border: 1px solid var(--paleBlue);
+      outline: none;
+    }
+
+    .form__email::placeholder {
+      color: var(--paleBlue);
+      font-size: 0.8rem;
+    }
+
+    .form__email:hover,
+    .form__email:focus {
+      border-color: var(--blue);
+    }
+
+    .form__button {
+      background: var(--blue);
+      color: white;
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 30px;
+      border: 0;
+      letter-spacing: 0.03rem;
+      outline: none;
+    }
+
+    .form__button:hover,
+    .form__button:focus {
+      background: hsl(223, 87%, 73%);
+    }
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
@@ -79,7 +121,7 @@
   
   <form class="form">
     <input type="text" class="form__email" id="form__email" placeholder="Your email address...">
-    <button class="form_button" id="form_button">Notify Me</button>
+    <button class="form__button mt-small" id="form__button">Notify Me</button>
   </form>
 
   <figure class="container-image">
