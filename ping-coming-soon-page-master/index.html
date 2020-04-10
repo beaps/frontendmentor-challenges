@@ -28,6 +28,10 @@
       font-family: 'Libre Franklin', sans-serif;
     }
 
+    .mt-xx-large {
+      margin-top: 7rem;
+    }
+
     .mt-x-large {
       margin-top: 4rem;
     }
@@ -37,11 +41,15 @@
     }
 
     .mt-medium {
-      margin-top: 1.5rem;
+      margin-top: 1rem;
     }
 
     .mt-small {
       margin-top: 0.7rem;
+    }
+
+    .mr-small {
+      margin-right: 0.5rem;
     }
 
     body {
@@ -50,7 +58,7 @@
     }
 
     .header {
-      padding: 4rem 1rem 1.5rem;
+      padding: 4rem 1rem 2rem;
     }
 
     .header__logo {
@@ -125,6 +133,31 @@
       object-fit: contain;
     }
 
+    .container-icons a {
+      border: 1px solid var(--paleBlue);
+      display: inline-block;
+      /* padding: 0.5rem; */
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      line-height: 37px;
+    }
+
+    .container-icons a:hover,
+    .container-icons a:focus {
+      background-color: hsl(223, 100%, 95%);
+    }
+
+    .container-icons a img {
+      width: 15px;
+      height: 15px;
+    }
+
+    .copyright {
+      color: var(--gray);
+      font-size: 0.7em;
+    }
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
@@ -147,11 +180,11 @@
     <img src="./images/illustration-dashboard.png" alt="A illustration of the dashboard">
   </figure>
 
-  <div class="container-icons">
-    <a href="#" class="container-facebook">
+  <div class="container-icons mt-xx-large">
+    <a href="#" class="container-facebook mr-small">
       <img src="./icons/facebook.svg" alt="facebook">
     </a>
-    <a href="#" class="container-twitter">
+    <a href="#" class="container-twitter mr-small">
       <img src="./icons/twitter.svg" alt="twitter">
     </a>
     <a href="#" class="container-instagram">
@@ -159,12 +192,12 @@
     </a>
   </div>
 
-  <p class="copyright">
+  <p class="copyright mt-large">
     &copy; Copyright Ping. All rights reserved.
   </p>
 
   <footer>
-    <p class="attribution">
+    <p class="attribution mt-large">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by beaps.
     </p>
