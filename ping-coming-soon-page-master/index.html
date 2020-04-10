@@ -91,6 +91,7 @@
 
     .form {
       padding: 0 2rem;
+      position: relative;
     }
 
     .form__email {
@@ -132,6 +133,17 @@
       transform: scale(0.98);
     }
 
+    .form__error {
+      color: var(--lightRed);
+      font-size: 0.6rem;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    .form__email--red {
+      border: 1px solid var(--lightRed) !important;
+    }
+
     .container-image {
       padding: 0 2rem;
     }
@@ -145,7 +157,6 @@
     .container-icons a {
       border: 1px solid var(--paleBlue);
       display: inline-block;
-      /* padding: 0.5rem; */
       border-radius: 50%;
       width: 35px;
       height: 35px;
@@ -190,9 +201,13 @@
       .form__button {
         width: 28%;
       }
-
       .container-icons {
         margin-top: 5rem;
+      }
+      .form__error {
+        text-align: left;
+        margin-left: 2.8rem;
+        position: absolute;
       }
     }
   </style>
@@ -207,7 +222,7 @@
       <p class="header__info mt-medium">Subscribe and get notified</p>
     </header>
     
-    <form class="form">
+    <form class="form" id="form">
       <input type="text" class="form__email" id="form__email" placeholder="Your email address...">
       <button class="form__button mt-small" id="form__button">Notify Me</button>
     </form>
@@ -239,5 +254,31 @@
       </p>
     </footer>
   </div>
+  
+  <script>
+    const email = document.querySelector('#form__email');
+    const form = document.querySelector('#form');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (document.querySelector('#form__error')) {
+        document.querySelector('#form__error').remove();
+        email.classList.remove('form__email--red');
+      }
+      if (
+        !email.value.match(/^\"?[\w\.!#$%&'*+\-/=?^_`{|}~ ]{1,62}\"?@((\[.*\])|[\w\-]+\.?\w{2,10})$/i)
+      ) {
+        email.insertAdjacentHTML('afterend', `<div id="form__error"></div>`);
+        const error = document.querySelector('#form__error');
+        email.classList.add('form__email--red');
+        error.classList.add('form__error');
+        error.textContent = 'Please provide a valid email address'
+      } else {
+        setTimeout(() => {
+          window.location.href = './thanks.html';
+        }, 1000);
+      }
+    });
+  </script>
 </body>
 </html>
