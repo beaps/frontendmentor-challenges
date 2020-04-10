@@ -44,6 +44,10 @@
       margin-top: 1rem;
     }
 
+    .mb-medium {
+      margin-bottom: 1rem;
+    }
+
     .mt-small {
       margin-top: 0.7rem;
     }
@@ -55,6 +59,11 @@
     body {
       text-align: center;
       color: var(--veryDarkBlue);
+    }
+
+    .container {
+      max-width: 520px;
+      margin: 0 auto;
     }
 
     .header {
@@ -163,44 +172,46 @@
   </style>
 </head>
 <body>
-  <header class="header">
-    <img class="header__logo" src="./images/logo.svg" alt="Ping logo">
-    <h1 class="header__title mt-large">
-      We are launching <span class="header__title--bold">soon!</span>
-    </h1>
-    <p class="header__info mt-medium">Subscribe and get notified</p>
-  </header>
-  
-  <form class="form">
-    <input type="text" class="form__email" id="form__email" placeholder="Your email address...">
-    <button class="form__button mt-small" id="form__button">Notify Me</button>
-  </form>
-
-  <figure class="container-image mt-x-large">
-    <img src="./images/illustration-dashboard.png" alt="A illustration of the dashboard">
-  </figure>
-
-  <div class="container-icons mt-xx-large">
-    <a href="#" class="container-facebook mr-small">
-      <img src="./icons/facebook.svg" alt="facebook">
-    </a>
-    <a href="#" class="container-twitter mr-small">
-      <img src="./icons/twitter.svg" alt="twitter">
-    </a>
-    <a href="#" class="container-instagram">
-      <img src="./icons/instagram.svg" alt="instagram">
-    </a>
-  </div>
-
-  <p class="copyright mt-large">
-    &copy; Copyright Ping. All rights reserved.
-  </p>
-
-  <footer>
-    <p class="attribution mt-large">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by beaps.
+  <div class="container">
+    <header class="header">
+      <img class="header__logo" src="./images/logo.svg" alt="Ping logo">
+      <h1 class="header__title mt-large">
+        We are launching <span class="header__title--bold">soon!</span>
+      </h1>
+      <p class="header__info mt-medium">Subscribe and get notified</p>
+    </header>
+    
+    <form class="form">
+      <input type="text" class="form__email" id="form__email" placeholder="Your email address...">
+      <button class="form__button mt-small" id="form__button">Notify Me</button>
+    </form>
+    
+    <figure class="container-image mt-x-large">
+      <img src="./images/illustration-dashboard.png" alt="A illustration of the dashboard">
+    </figure>
+    
+    <div class="container-icons mt-xx-large">
+      <a href="#" class="container-facebook mr-small">
+        <img src="./icons/facebook.svg" alt="facebook">
+      </a>
+      <a href="#" class="container-twitter mr-small">
+        <img src="./icons/twitter.svg" alt="twitter">
+      </a>
+      <a href="#" class="container-instagram">
+        <img src="./icons/instagram.svg" alt="instagram">
+      </a>
+    </div>
+    
+    <p class="copyright mt-large">
+      &copy; Copyright Ping. All rights reserved.
     </p>
-  </footer>
+    
+    <footer>
+      <p class="attribution mt-large mb-medium">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by beaps.
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
